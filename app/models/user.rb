@@ -3,6 +3,12 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   after_create :send_admin_mail
 
+  validates :name, presence: true, uniqueness: { scope: :email }
+  validates :email, presence: true, uniqueness: true
+  validates_email_format_of :email
+  validates :approved, inclusion: { in: [true, false] }
+  validates :encrypted_password, presence: true, length: { minimum: 6 }
+
   def send_admin_mail
     AdminMailer.new_user_waiting_for_approval(self).deliver
   end
