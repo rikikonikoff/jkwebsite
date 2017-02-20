@@ -1,11 +1,13 @@
 source 'https://rubygems.org/'
 
+gem 'devise'
 gem 'rails'
 gem 'pg'
 gem 'puma'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'jquery-rails'
+gem 'validates_email_format_of'
 
 group :development do
   gem 'listen'
