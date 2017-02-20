@@ -238,6 +238,8 @@ GEM
     uglifier (3.0.4)
       execjs (>= 0.3.0, < 3)
     valid_attribute (2.0.0)
+    validates_email_format_of (1.6.3)
+      i18n
     warden (1.2.7)
       rack (>= 1.0)
     websocket-driver (0.6.5)
@@ -276,6 +278,7 @@ DEPENDENCIES
   tzinfo-data
   uglifier
   valid_attribute
+  validates_email_format_of
 
 BUNDLED WITH
    1.14.4

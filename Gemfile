@@ -7,6 +7,7 @@ gem 'puma'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'jquery-rails'
+gem 'validates_email_format_of'
 
 group :development do
   gem 'listen'
