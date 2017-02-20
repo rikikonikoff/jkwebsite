@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_admin!, only: [:index]
-  
+
   def index
     if params[:approved] == "false"
       @users = User.where(approved: false)
@@ -33,6 +33,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 end
