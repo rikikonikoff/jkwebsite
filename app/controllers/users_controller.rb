@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :authenticate_admin!, only: :index
+  
   def index
     if params[:approved] == "false"
       @users = User.where(approved: false)
@@ -13,12 +15,16 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    @user.save
   end
 
   def edit
+    @user = User.find(params[:id])
   end
 
   def update
+    @user = User.find(params[:id])
+    @user.update(user_params)
   end
 
   def destroy
