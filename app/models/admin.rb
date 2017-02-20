@@ -1,6 +1,10 @@
 class Admin < ApplicationRecord
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+  devise :database_authenticatable,
+    :registerable,
+    :recoverable,
+    :rememberable,
+    :trackable,
+    :validatable
 
   validates :name, presence: true, uniqueness: { scope: :email }
   validates :email, presence: true, uniqueness: true

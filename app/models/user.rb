@@ -1,6 +1,10 @@
 class User < ApplicationRecord
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+  devise :database_authenticatable,
+    :registerable,
+    :recoverable,
+    :rememberable,
+    :trackable,
+    :validatable
   after_create :send_admin_mail
 
   validates :name, presence: true, uniqueness: { scope: :email }
@@ -19,9 +23,9 @@ class User < ApplicationRecord
 
   def inactive_message
     if !approved?
-     :not_approved
+      :not_approved
     else
-     super # Use whatever other message
+      super # Use whatever other message
     end
   end
 
