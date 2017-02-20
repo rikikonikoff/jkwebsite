@@ -6,9 +6,8 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-
-  # config.secret_key = ''
-
+  # config.secret_key = '9f9f8fd4d45b2a08670dfacfd3d4251a0eed2670203a53137b2183
+  # 58d0bdd7d08f760dedae07397ce6ba59a8353f0ee8608487f64e4305c967af175c4842edbd'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -59,10 +58,9 @@ Devise.setup do |config|
   config.strip_whitespace_keys = [:email]
 
   # Tell if authentication through request.params is enabled. True by default.
-  # It can be set to an array that will enable params authentication only for
-  # the given strategies, for example, `config.params_authenticatable =
-  # [:database]` will enable it only for database (email + password)
-  # authentication.
+  # It can be set to an array that will enable params authentication only for the
+  # given strategies, for example, `config.params_authenticatable = [:database]`
+  # will enable it only for database (email + password) authentication.
   # config.params_authenticatable = true
 
   # Tell if authentication through HTTP Auth is enabled. False by default.
@@ -117,7 +115,8 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = 'ff02aec205851da2e9de82cf0cf953271e3128c64268c7af97a78aecce468d22b6b579368de087281a7ca04914abb4d98e9844baf8533d169b72d706f61f9879'
+  # config.pepper = '3a74307d74f3ca95cc4ee965935a298205be3ac48f5d5c1386a84d0edb2
+  # 7d42bd3123552085dcd16cf9949caa99c04b4b55b55d4efb6831849005d742e1b4978'
 
   # Send a notification email when the user's password is changed
   # config.send_password_change_notification = false
@@ -180,7 +179,7 @@ Devise.setup do |config|
   # Defines which strategy will be used to lock an account.
   # :failed_attempts = Locks an account after a number of failed attempts to
   # sign in.
-  # :none            = No lock strategy. You should handle locking by yourself.
+  # :none = No lock strategy. You should handle locking by yourself.
   # config.lock_strategy = :failed_attempts
 
   # Defines which key will be used when locking and unlocking an account
