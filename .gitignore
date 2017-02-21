@@ -14,3 +14,8 @@
 #Ignore sensitive info.
 /config/database.yml
 .env
+
+#Ignore react-related noise
+/node_modules
+/app/assets/javascripts/bundle.js
+/react/coverage
