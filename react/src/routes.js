@@ -6,7 +6,7 @@ import PublicationsContainer from './containers/PublicationsContainer';
 let routes = (
   <Route path="/" component={Layout}>
     <IndexRoute component={PublicationsContainer} />
-    // <Route path="bars/:id" component={PublicationsContainer} />
+    <Route path="/home" component={PublicationsContainer} />
   </Route>
 );
 
