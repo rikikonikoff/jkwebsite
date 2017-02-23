@@ -8,7 +8,7 @@ let routes = (
   <Route path="/" component={Layout}>
     <IndexRoute component={PublicationsContainer} />
     <Route path="/home" component={PublicationsContainer} />
-    <Route path="/wheres_jacobs" component={WheresJacob} />
+    <Route path="/wheresjacob" component={WheresJacob} />
   </Route>
 );
 

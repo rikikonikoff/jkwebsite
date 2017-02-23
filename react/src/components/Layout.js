@@ -6,13 +6,10 @@ const Layout = (props) => {
   return(
     <div>
       <BackButton />
-      <span>
-        When I grow up, I will be a dope header.
-      </span>
       <br />
-      <Link to="/home"> HOME </Link>
-      <a href="/users/sign_in"> Friends and Family Login </a>
-      <Link to="/wheres_jacobs"> Where's Jacob? </Link>
+      <Link to="/home">Home</Link>
+      <a href="/users/sign_in">Log In</a>
+      <Link to="/wheresjacob">Where's Jacob?</Link>
       <button method='get' action='/JacobKonikoffResume.pdf'>
         Download Jacob's Resume
       </button>

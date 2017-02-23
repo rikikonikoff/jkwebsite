@@ -6,10 +6,12 @@ Rails.application.routes.draw do
   }
   devise_for :admins
 
+  get "/wheresjacob", to: "wheres_jacobs#index", as: "wheres_jacobs"
+
   resources :home, only: [:index]
   resources :users, only: [:index, :show]
   resources :publications
-  resources :wheres_jacobs
+  resources :wheres_jacobs, only: [:create]
 
   namespace :api do
     namespace :v1 do
