@@ -1,6 +1,6 @@
-Publication.create!(authors: "Konikoff, J., and Toplosky, S.", date: "2010", title: "Analysis of Simplified DES Algorithms", journal: "Cryptologia", issue: "34(3)", pages: "211- 224", external_link: "http://dx.doi.org/10.1080/01611191003646433")
+Publication.create!(authors: "Konikoff, J., and Toplosky, S.", date: "2010", title: "Analysis of Simplified DES Algorithms", journal: "Cryptologia", issue: "34(3)", pages: "211-224", external_link: "http://dx.doi.org/10.1080/01611191003646433")
 
-Publication.create!(authors: "Brookmeyer, R., and Konikoff, J.", date: "2011", title: "Statistical Considerations in Determining HIV Incidence from Changes in HIV Prevalence", journal: "Statistical Communications in Infectious Diseases", issue: "3(1)", pages: "Article 9", external_link: "https://works.bepress.com/rbrookmeyer/34/")
+Publication.create!(authors: "Brookmeyer, R., and Konikoff, J.", date: "2011", title: "Statistical Considerations in Determining HIV Incidence from Changes in HIV Prevalence", journal: "Statistical Communications in Infectious Diseases", issue: "3(1)", pages: "article 9", external_link: "https://works.bepress.com/rbrookmeyer/34/")
 
 Publication.create!(authors: "Laeyendecker, O., Brookmeyer, R., Cousins, M. M., Mullis, C. E., Konikoff, J., Donnell, D., Celum, C., Buchbinder, S. P., Seage, G. R. III, Kirk, G. D., Mehta S. H., Astemborksi, J., Jacobson, L. P., Margolick, J. B., Brown J., Quinn, T. C., and Eshleman S. H.", date: "2013", title: "HIV Incidence Determination in the United States: A Multiassay Approach", journal: "Journal of Infectious Diseases", issue: "207", pages: "232-239", external_link: "https://academic.oup.com/jid/article/207/2/232/2192406/HIV-Incidence-Determination-in-the-United-States-A")
 
