@@ -10,10 +10,12 @@ const Layout = (props) => {
         When I grow up, I will be a dope header.
       </span>
       <br />
-      <Link to='/'> HOME </Link>
-      <Link to='/'>  </Link>
+      <Link to="/home"> HOME </Link>
+      <Link to="/users/sign_in"> Friends and Family Login </Link>
+      <Link to="/wheres_jacobs"> Where's Jacob? </Link>
+      <Link to="/admins/sign_in"> Jacob's Special Login </Link>
       <br />
-      <h1 className="page-title"> Publications </h1>
+      <h1 className="page-title"> Jacob M. Konikoff </h1>
       { props.children }
     </div>
   );
