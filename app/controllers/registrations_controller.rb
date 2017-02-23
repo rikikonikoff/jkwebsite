@@ -1,5 +1,6 @@
 class RegistrationsController < Devise::RegistrationsController
   before_action :configure_sign_up_params, only: :create
+  respond_to :html, :json
 
   def new
     @user = User.new

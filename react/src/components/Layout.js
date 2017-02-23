@@ -11,9 +11,11 @@ const Layout = (props) => {
       </span>
       <br />
       <Link to="/home"> HOME </Link>
-      <Link to="/users/sign_in"> Friends and Family Login </Link>
+      <a href="/users/sign_in"> Friends and Family Login </a>
       <Link to="/wheres_jacobs"> Where's Jacob? </Link>
-      <Link to="/admins/sign_in"> Jacob's Special Login </Link>
+      <button method='get' action='/JacobKonikoffResume.pdf'>
+        Download Jacob's Resume
+      </button>
       <br />
       <h1 className="page-title"> Jacob M. Konikoff </h1>
       { props.children }
