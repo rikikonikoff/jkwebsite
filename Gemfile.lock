@@ -270,6 +270,7 @@ DEPENDENCIES
   puma
   rails
   rails_12factor
+  responders
   rspec-rails
   sass-rails
   shoulda

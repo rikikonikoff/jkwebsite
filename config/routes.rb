@@ -15,7 +15,8 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :publications, only: [:index]
       resources :users, only: [:index]
-      resources :wheres_jacobs, only: [:index]
+      resources :wheres_jacobs, only: [:index, :create]
+      resources :home, only: [:index]
     end
   end
 end
