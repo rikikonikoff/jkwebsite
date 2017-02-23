@@ -1,7 +1,15 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Publication.create!(authors: "Konikoff, J., and Toplosky, S.", date: "2010", title: "Analysis of Simplified DES Algorithms", journal: "Cryptologia", issue: "34(3)", pages: "211-224", external_link: "http://dx.doi.org/10.1080/01611191003646433")
+
+Publication.create!(authors: "Brookmeyer, R., and Konikoff, J.", date: "2011", title: "Statistical Considerations in Determining HIV Incidence from Changes in HIV Prevalence", journal: "Statistical Communications in Infectious Diseases", issue: "3(1)", pages: "article 9", external_link: "https://works.bepress.com/rbrookmeyer/34/")
+
+Publication.create!(authors: "Laeyendecker, O., Brookmeyer, R., Cousins, M. M., Mullis, C. E., Konikoff, J., Donnell, D., Celum, C., Buchbinder, S. P., Seage, G. R. III, Kirk, G. D., Mehta S. H., Astemborksi, J., Jacobson, L. P., Margolick, J. B., Brown J., Quinn, T. C., and Eshleman S. H.", date: "2013", title: "HIV Incidence Determination in the United States: A Multiassay Approach", journal: "Journal of Infectious Diseases", issue: "207", pages: "232-239", external_link: "https://academic.oup.com/jid/article/207/2/232/2192406/HIV-Incidence-Determination-in-the-United-States-A")
+
+Publication.create!(authors: "Brookmeyer, R., Konikoff J., Laeyendecker, O., and Eshleman, S.H.", date: "2013", title: "Estimation of HIV Incidence Using Multiple Biomarkers", journal: "American Journal of Epidemiology", issue: "49(10)", pages: "264-272", external_link: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3626051/")
+
+Publication.create!(authors: "Konikoff, J., Brookmeyer, R., Longosz, A. F., Cousins, M. M., Celum, C., Buchbinder, S. P., Seage, G. R. III, Kirk, G. D., Moore, R. D., Mehta S. H., Margolick, J. B., Brown J., Mayer, K. H., Koblin, B. A., Justman, J. E., Hodder, S. L., Quinn, T. C., Eshleman S. H., and Laeyendecker, O.", date: "2013", title: "Performance of a Limiting-Antigen Avidity Enzyme Immunoassay for Cross-Sectional Estimation of HIV Incidence in the United States", journal: "PLoS ONE", issue: "8(12)", pages: "e82772", external_link: "http://dx.doi.org/10.1371/journal.pone.0082772")
+
+Publication.create!(authors: "Cousins, M. M., Konikoff, J., Laeyendecker, O., Celum, C., Buchbinder, S. P., Seage, G. R. III, Kirk, G. D., Moore, R. D., Mehta S. H., Margolick, J. B., Brown J., Mayer, K. H., Koblin, B. A., Wheeler, D., Justman, J. E., Hodder, S. L., Quinn, T. C., Brookmeyer, R., and Eshleman S. H.", date: "2014", title: "HIV Diversity as a Biomarker for HIV Incidence Estimation: Including a High-Resolution Melting Diversity Assay in a Multiassay Algorithm", journal: "Journal of Clinical Microbiology", issue: "52(1)", pages: "115-121", external_link: "http://jcm.asm.org/content/52/1/115.full")
+
+Publication.create!(authors: "Cousins, M. M., Konikoff, J., Sabin, D., Khaki, L., Longosz, A. F., Laeyendecker, O., Celum, C., Buchbinder, S. P., Seage, G. R. III, Kirk, G. D., Moore, R. D., Mehta S. H., Margolick, J. B., Brown J., Mayer, K. H., Koblin, B. A., Wheeler, D., Justman, J. E., Hodder, S. L., Quinn, T. C., Brookmeyer, R., and Eshleman S. H.", date: "2014", title: "A Comparison of Two Measures of HIV Diversity in Multi-Assay Algorithms for HIV Incidence Estimation", journal: "PLoS ONE", issue: "9(6)", pages: "e101043", external_link: "http://dx.doi.org/10.1371/journal.pone.0101043")
+
+Publication.create!(authors: "Konikoff, J. and Brookmeyer R.", date: "2015", title: "Sample Size Methods for Estimating HIV Incidence from Cross-Sectional Surveys", journal: "Biometrics", issue: "71(4)", pages: "1121-1129", external_link: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4715554/")

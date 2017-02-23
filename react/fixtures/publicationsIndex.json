@@ -1,0 +1,82 @@
+[
+  {
+    "id": 2,
+    "title": "Statistical Considerations in Determining HIV Incidence from Changes in HIV Prevalence",
+    "journal": "Statistical Communications in Infectious Diseases",
+    "external_link": "https://works.bepress.com/rbrookmeyer/34/",
+    "date": "2011",
+    "authors": "Brookmeyer, R., and Konikoff, J.",
+    "issue": "3(1)",
+    "pages": "Article 9"
+  },
+  {
+    "id": 3,
+    "title": "HIV Incidence Determination in the United States: A Multiassay Approach",
+    "journal": "Journal of Infectious Diseases",
+    "external_link": "https://academic.oup.com/jid/article/207/2/232/2192406/HIV-Incidence-Determination-in-the-United-States-A",
+    "date": "2013",
+    "authors": "Laeyendecker, O., Brookmeyer, R., Cousins, M. M., Mullis, C. E., Konikoff, J., Donnell, D., Celum, C., Buchbinder, S. P., Seage, G. R. III, Kirk, G. D., Mehta S. H., Astemborksi, J., Jacobson, L. P., Margolick, J. B., Brown J., Quinn, T. C., and Eshleman S. H.",
+    "issue": "207",
+    "pages": "232-239"
+  },
+  {
+    "id": 4,
+    "title": "Estimation of HIV Incidence Using Multiple Biomarkers",
+    "journal": "American Journal of Epidemiology",
+    "external_link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3626051/",
+    "date": "2013",
+    "authors": "Brookmeyer, R., Konikoff J., Laeyendecker, O., and Eshleman, S.H.",
+    "issue": "49(10)",
+    "pages": "264-272"
+  },
+  {
+    "id": 5,
+    "title": "Performance of a Limiting-Antigen Avidity Enzyme Immunoassay for Cross-Sectional Estimation of HIV Incidence in the United States",
+    "journal": "PLoS ONE",
+    "external_link": "http://dx.doi.org/10.1371/journal.pone.0082772",
+    "date": "2013",
+    "authors": "Konikoff, J., Brookmeyer, R., Longosz, A. F., Cousins, M. M., Celum, C., Buchbinder, S. P., Seage, G. R. III, Kirk, G. D., Moore, R. D., Mehta S. H., Margolick, J. B., Brown J., Mayer, K. H., Koblin, B. A., Justman, J. E., Hodder, S. L., Quinn, T. C., Eshleman S. H., and Laeyendecker, O.",
+    "issue": "8(12)",
+    "pages": "e82772"
+  },
+  {
+    "id": 6,
+    "title": "HIV Diversity as a Biomarker for HIV Incidence Estimation: Including a High-Resolution Melting Diversity Assay in a Multiassay Algorithm",
+    "journal": "Journal of Clinical Microbiology",
+    "external_link": "http://jcm.asm.org/content/52/1/115.full",
+    "date": "2014",
+    "authors": "Cousins, M. M., Konikoff, J., Laeyendecker, O., Celum, C., Buchbinder, S. P., Seage, G. R. III, Kirk, G. D., Moore, R. D., Mehta S. H., Margolick, J. B., Brown J., Mayer, K. H., Koblin, B. A., Wheeler, D., Justman, J. E., Hodder, S. L., Quinn, T. C., Brookmeyer, R., and Eshleman S. H.",
+    "issue": "52(1)",
+    "pages": "115-121"
+  },
+  {
+    "id": 7,
+    "title": "A Comparison of Two Measures of HIV Diversity in Multi-Assay Algorithms for HIV Incidence Estimation",
+    "journal": "PLoS ONE",
+    "external_link": "http://dx.doi.org/10.1371/journal.pone.0101043",
+    "date": "2014",
+    "authors": "Cousins, M. M., Konikoff, J., Sabin, D., Khaki, L., Longosz, A. F., Laeyendecker, O., Celum, C., Buchbinder, S. P., Seage, G. R. III, Kirk, G. D., Moore, R. D., Mehta S. H., Margolick, J. B., Brown J., Mayer, K. H., Koblin, B. A., Wheeler, D., Justman, J. E., Hodder, S. L., Quinn, T. C., Brookmeyer, R., and Eshleman S. H.",
+    "issue": "9(6)",
+    "pages": "e101043"
+  },
+  {
+    "id": 8,
+    "title": "Sample Size Methods for Estimating HIV Incidence from Cross-Sectional Surveys",
+    "journal": "Biometrics",
+    "external_link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4715554/",
+    "date": "2015",
+    "authors": "Konikoff, J. and Brookmeyer R.",
+    "issue": "71(4)",
+    "pages": "1121-1129"
+  },
+  {
+    "id": 1,
+    "title": "Analysis of Simplified DES Algorithms",
+    "journal": "Cryptologia",
+    "external_link": "http://dx.doi.org/10.1080/01611191003646433",
+    "date": "2010",
+    "authors": "Konikoff, J., and Toplosky, S.",
+    "issue": "34(3)",
+    "pages": "211-224"
+  }
+]
