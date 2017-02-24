@@ -36,7 +36,9 @@ class WheresJacob extends Component {
   }
 
   fetchSession(){
-    fetch('/api/v1/home')
+    fetch('/api/v1/home', {
+      credentials: 'same-origin'
+    })
     .then((response) => {
       if(response.ok) {
         return response.json();
@@ -46,18 +48,27 @@ class WheresJacob extends Component {
         throw(error);
       }
     })
-    .then((responseData) => {
-      this.setState({ session: responseData });
-      debugger;
+    .then((data) => {
+      this.setState({ session: data });
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
 
+
 render(){
     return(
       <div>
-      <p>Jacob is in...{this.state.wheresJacob}</p>
-      <a href="/wheres_jacobs/new"> (Jacob, where are you?)</a>
+      {this.state.session.signed_in && this.state.session.admin &&
+        <div>
+        <h2>Jacob is in {this.state.wheresJacob}</h2>
+        <NewWheresJacob />
+        </div>
+      }
+      {this.state.session.signed_in && this.state.session.user &&
+        <div>
+        <h2>Jacob is in {this.state.wheresJacob}</h2>
+        </div>
+      }
       </div>
     );
   }

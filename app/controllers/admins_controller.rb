@@ -1,30 +1,32 @@
-class AdminsController < ApplicationController
+class AdminsController < Devise::RegistrationsController
+  before_action :configure_sign_up_params, only: :create
   before_action :authenticate_admin!, except: [:new, :create]
+  respond_to :html, :json
 
   def new
     @admin = Admin.new
   end
 
   def create
-    @admin = Admin.new(admin_params)
+    @admin = Admin.new(sign_up_params)
     @admin.save
   end
 
   def edit
-    @admin = Admin.find(params[:id])
+    @admin = current_admin
   end
 
   def update
-    @admin = Admin.find(params[:id])
-    @admin.update(admin_params)
-  end
-
-  def destroy
+    @admin = current_admin
   end
 
   private
 
-  def admin_params
-    params.require(:admin).permit(:name, :email, :password)
+  def configure_sign_up_params
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :email, :password, :password_confirmation])
+  end
+
+  def after_update_path_for(resource)
+    root_path
   end
 end

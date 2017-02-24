@@ -13,19 +13,20 @@ const Publication = (props) => {
   if (props.selected === props.id) {
     details =
       <p className="publicationDetails">
-      {props.authors} ({props.date}). {props.title}. {props.journal} {props.issue}, {props.pages}.
+      Authors: {props.authors} <br/>
+      Published: {props.journal} {props.issue}, {props.pages} <br/>
       <br/>
-      <a href={props.externalLink}>Read this article</a>
       </p>;
   }
 
   return(
       <div onMouseOver={handleMouse} onMouseOut={handleMouseOut}>
-        <p>
-          {props.title} ({props.date})
-          <br/>
-          {details}
-        </p>
+        <a href={props.externalLink}>
+          <h3>
+            {props.title} ({props.date})
+          </h3>
+        </a>
+        {details}
         <br/>
       </div>
   );
