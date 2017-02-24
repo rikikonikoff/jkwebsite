@@ -1,5 +1,3 @@
 class PublicationsController < ApplicationController
-  def index
-    @publications = Publication.all
-  end
+  def index; end
 end

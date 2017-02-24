@@ -1,5 +1,6 @@
 class RegistrationsController < Devise::RegistrationsController
   before_action :configure_sign_up_params, only: :create
+  before_action :authenticate_user!, except: [:new, :create]
   respond_to :html, :json
 
   def new
@@ -26,6 +27,6 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def after_update_path_for(resource)
-    user_path(resource)
+    root_path
   end
 end

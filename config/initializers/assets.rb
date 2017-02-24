@@ -9,3 +9,11 @@ Rails.application.config.assets.version = '1.0'
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( jkwebsite.js )
+
+# Include Rails helpers in the assets pipeline
+Rails.application.config.assets.configure do |env|
+  env.context_class.class_eval do
+    include ActionView::Helpers
+    include Rails.application.routes.url_helpers
+  end
+end
