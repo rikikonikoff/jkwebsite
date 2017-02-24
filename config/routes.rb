@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   }
 
   resources :home, only: [:index]
-  resources :users, only: [:index, :show]
+  resources :users, only: [:index]
   resources :publications, only: [:index]
 
   namespace :api do

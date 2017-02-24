@@ -58,13 +58,13 @@ class WheresJacob extends Component {
 render(){
     return(
       <div>
-      {this.state.session.signed_in && this.state.session.admin &&
+      {this.state.session && this.state.session.admin &&
         <div>
         <h2>Jacob is in {this.state.wheresJacob}</h2>
         <NewWheresJacob />
         </div>
       }
-      {this.state.session.signed_in && this.state.session.user &&
+      {this.state.session && this.state.session.user &&
         <div>
         <h2>Jacob is in {this.state.wheresJacob}</h2>
         </div>

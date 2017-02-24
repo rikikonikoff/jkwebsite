@@ -1,10 +1,10 @@
 import React from 'react';
 
-const UsersIndex = (props) => {
+const UserShow = (props) => {
   return(
     <div>
     </div>
   );
 };
 
-export default UsersIndex;
+export default UserShow;

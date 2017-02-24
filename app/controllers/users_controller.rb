@@ -1,6 +1,4 @@
 class UsersController < ApplicationController
-  before_action :authenticate_admin!
-
   def index
     if params[:approved] == "false"
       @users = User.where(approved: false)

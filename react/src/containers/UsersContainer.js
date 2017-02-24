@@ -1,19 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Link } from 'react-router';
+import UsersIndex from '../components/UsersIndex';
+import UserSignUp from '../components/UserSignUp';
+import UserSignIn from '../components/UserSignIn';
 
-class UsersContainer extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-
-    };
-  }
-  render(){
-    return(
-      <div>
-      I am the users container
-      </div>
-    );
-  }
-}
+const UsersContainer = (props) => {
+  return(
+    <div>
+      <UserSignUp />
+      <UserSignIn />
+      <UsersIndex />
+    </div>
+  );
+};
 
 export default UsersContainer;

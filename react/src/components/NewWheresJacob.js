@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import $ from 'jquery';
 
 class NewWheresJacob extends Component {
   constructor(props) {
