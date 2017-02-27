@@ -5,7 +5,7 @@ import BackButton from './BackButton.js';
 const Navbar = (props) => {
   return(
     <div>
-      <ul className="navbar">
+      <ul className="side-nav small-3 columns" role="navigation">
         <li><BackButton /></li>
         <li><Link to="/home">Home</Link></li>
         <li><Link to="/users/sign_in">Log In</Link></li>
