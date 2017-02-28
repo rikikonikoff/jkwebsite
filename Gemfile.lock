@@ -296,7 +296,7 @@ DEPENDENCIES
   rails_12factor
   responders
   rspec-rails
-  sass-rails
+  sass-rails (>= 3.2)
   sendgrid
   shoulda
   simplecov
