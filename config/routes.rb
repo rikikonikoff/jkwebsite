@@ -5,11 +5,11 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
     registrations: 'registrations',
     sessions: 'sessions'
-  }
+  }, skip: :passwords
   devise_for :admins, controllers: {
     registrations: 'admins',
     sessions: 'sessions'
-  }
+  }, skip: :passwords
 
   resources :home, only: [:index]
   resources :users, only: [:index, :show, :update]
