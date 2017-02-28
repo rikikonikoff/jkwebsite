@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   devise_for :admins, controllers: {
     registrations: 'admins',
     sessions: 'sessions'
-  }
+  }, skip: :passwords
 
   resources :home, only: [:index]
   resources :users, only: [:index, :show, :update]
