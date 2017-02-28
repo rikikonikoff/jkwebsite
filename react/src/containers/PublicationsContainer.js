@@ -8,8 +8,7 @@ class PublicationsContainer extends Component {
       publications: [],
       selectedPublicationId: null
     };
-    this.handleMouse = this.handleMouse.bind(this);
-    this.handleMouseOut = this.handleMouseOut.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
@@ -29,13 +28,11 @@ class PublicationsContainer extends Component {
       });
   }
 
-  handleMouse(id) {
-    this.setState({ selectedPublicationId: id });
-  }
-
-  handleMouseOut(id) {
-    if (this.state.selectetdPublicationId === id) {
-      this.setState({ selectetdPublicationId: null });
+  handleClick(id) {
+    if (this.state.selectedPublicationId === id) {
+      this.setState({ selectedPublicationId: null });
+    } else {
+      this.setState({ selectedPublicationId: id });
     }
   }
 
@@ -51,9 +48,14 @@ class PublicationsContainer extends Component {
           journal={pub.journal}
           issue={pub.issue}
           pages={pub.pages}
+          abstract={pub.abstract}
+          background={pub.background}
+          methods={pub.methods}
+          results={pub.results}
+          methodsAndFindings={pub.methods_and_findings}
+          conclusions={pub.conclusions}
           externalLink={pub.external_link}
-          handleMouse={this.handleMouse}
-          handleMouseOut={this.handleMouseOut}
+          handleClick={this.handleClick}
           selected={this.state.selectedPublicationId}
         />
       );

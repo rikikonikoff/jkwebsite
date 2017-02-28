@@ -1,34 +1,44 @@
 import React from 'react';
 
 const Publication = (props) => {
-  let handleMouse = (id) => {
-    props.handleMouse(props.id);
-  };
-
-  let handleMouseOut = (id) => {
-    props.handleMouseOut(props.id);
+  let handleClick = (id) => {
+    props.handleClick(props.id);
   };
 
   let details;
   if (props.selected === props.id) {
     details =
       <p className="publicationDetails">
-      Authors: {props.authors} <br/>
-      Published: {props.journal} {props.issue}, {props.pages} <br/>
-      <br/>
+        <br/>
+        {props.abstract &&
+          <p><i>Abstract</i>: {props.abstract}</p>}
+        {props.background &&
+          <p><i>Background</i>: {props.background}</p>}
+        {props.methods &&
+          <p><i>Methods</i>: {props.methods}</p>}
+        {props.results &&
+          <p><i>Results</i>: {props.results}</p>}
+        {props.methodsAndFindings &&
+          <p><i>Methods and Findings</i>: {props.methodsAndFindings}</p>}
+        {props.conclusions &&
+          <p><i>Conclusions</i>: {props.conclusions}</p>}
       </p>;
   }
 
+  let publishedInfo = `${props.journal} ${props.issue}, ${props.pages}`;
+
   return(
-      <div onMouseOver={handleMouse} onMouseOut={handleMouseOut}>
-        <a href={props.externalLink}>
-          <h3>
-            {props.title} ({props.date})
-          </h3>
-        </a>
+    <div className="panel panel-default">
+      <div onClick={handleClick} className="publication" title="Click to Expand">
+        <strong>{props.title} ({props.date})</strong><br/><br/>
+        <i>Authors</i>: {props.authors} <br/><br/>
+        <i>Published</i>:
+        <a href={props.externalLink} title="Visit Link">
+          {publishedInfo}
+        </a><br/>
         {details}
-        <br/>
       </div>
+    </div>
   );
 };
 

@@ -1,6 +1,6 @@
 class Api::V1::PublicationsController < ApplicationController
   def index
-    @publications = Publication.all
+    @publications = Publication.order("date DESC, title")
     render json: @publications
   end
 end

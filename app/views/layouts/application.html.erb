@@ -16,19 +16,27 @@
           <nav class="navbar navbar-default navbar-fixed-side">
               <p><%= link_to "Home", root_path %></p>
 
-              <% if user_signed_in? %>
+              <% if admin_signed_in? && user_signed_in? %>
+                <p><%= link_to "Admin Log Out", destroy_admin_session_path, method: :delete %></p>
+                <p><%= link_to "User Log Out", destroy_user_session_path, method: :delete %></p>
+                <p><%= link_to "Where's Jacob?", "/wheresjacob" %></p>
+                <p><%= link_to "Photo Gallery", photos_path %></p>
+              <% elsif user_signed_in? %>
                 <p><%= link_to "Log Out", destroy_user_session_path, method: :delete %></p>
+                <p><%= link_to "Where's Jacob?", "/wheresjacob" %></p>
+                <p><%= link_to "Photo Gallery", photos_path %></p>
+              <% elsif admin_signed_in? %>
+                <p><%= link_to "Admin Log Out", destroy_admin_session_path, method: :delete %></p>
+                <p><%= link_to "User Log In", new_user_session_path %></p>
+                <p><%= link_to "Where's Jacob?", "/wheresjacob" %></p>
+                <p><%= link_to "Photo Gallery", photos_path %></p>
               <% else %>
                 <p><%= link_to "Log In", new_user_session_path %></p>
               <% end %>
 
-              <% if admin_signed_in? %>
-                <p><%= link_to "Admin Log Out", destroy_admin_session_path, method: :delete %></p>
-              <% end %>
+              <p><%= link_to "Publications", publications_path %></p>
 
-              <p><%= link_to "Where's Jacob?", "/wheresjacob" %></p>
-
-              <p><%= link_to "Download Jacob's Resume", "/JacobKonikoffResume.pdf" %></p>
+              <p><%= link_to "Download Resume", "/JacobKonikoffResume.pdf" %></p>
           </nav>
         </div>
         <div class="col-xs-9 col-lg-10">
