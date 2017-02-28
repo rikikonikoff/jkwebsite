@@ -6,7 +6,11 @@ const UsersContainer = (props) => {
   return(
     <div>
       {props.session && props.session.admin &&
-        <UsersIndex />}
+        <div>
+          <h2>Users</h2>
+          <br/>
+          <UsersIndex />
+        </div>}
     </div>
   );
 };
