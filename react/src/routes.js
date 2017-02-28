@@ -1,15 +1,17 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
-import Navbar from './components/Navbar';
+import Layout from './components/Layout';
 import PublicationsContainer from './containers/PublicationsContainer';
 import UsersContainer from './containers/UsersContainer';
+import PhotosContainer from './containers/PhotosContainer';
 import WheresJacob from './components/WheresJacob';
 
 let routes = (
-  <Route path="/" component={Navbar}>
+  <Route path="/" component={Layout}>
     <IndexRoute component={PublicationsContainer} />
     <Route path="/home" component={PublicationsContainer} />
     <Route path="/publications" component={PublicationsContainer} />
+    <Route path="/photos" component={PhotosContainer} />
     <Route path="/wheresjacob" component={WheresJacob} />
     <Route path="/users" component={UsersContainer} />
     <Route path="/users/:id" component={UsersContainer} />

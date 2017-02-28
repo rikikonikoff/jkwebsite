@@ -3,4 +3,21 @@ class Api::V1::UsersController < ApplicationController
     @users = User.all
     render json: @users
   end
+
+  def show
+    @user = User.find(params[:id])
+    render json: @user
+  end
+
+  def update
+    @user = User.find(params[:id])
+    @user.update_attributes(approve_params)
+    render json: User.all
+  end
+
+  private
+
+  def approve_params
+    params.require(:user).permit(:approved)
+  end
 end

@@ -5,7 +5,7 @@ import UsersIndex from '../components/UsersIndex';
 const UsersContainer = (props) => {
   return(
     <div>
-      {props.current_admin &&
+      {props.session && props.session.admin &&
         <UsersIndex />}
     </div>
   );

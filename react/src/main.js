@@ -9,7 +9,9 @@ import Root from './components/Root';
 
 let reactAppRender = (element) => {
   ReactDOM.render(
-    <Root browserHistory={browserHistory} routes={routes} />,
+    <Root browserHistory={browserHistory}
+    routes={routes}
+    />,
     element
   );
 };
