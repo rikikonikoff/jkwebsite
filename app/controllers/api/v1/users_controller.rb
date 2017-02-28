@@ -1,6 +1,6 @@
 class Api::V1::UsersController < ApplicationController
   def index
-    @users = User.all
+    @users = User.order("approved", "updated_at DESC")
     render json: @users
   end
 

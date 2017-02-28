@@ -11,7 +11,11 @@ class PhotosContainer extends Component {
   render(){
     return(
       <div>
-      photos will go here
+      {this.props.session &&
+        <div>
+        <h2>Photos</h2>
+        photos will go here
+        </div>}
       </div>
     );
   }

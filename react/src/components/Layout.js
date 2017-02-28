@@ -39,6 +39,8 @@ class Layout extends Component {
 
     return(
       <div>
+        <h1>Jacob M. Konikoff</h1>
+        <br/>
         {children}
       </div>
     );

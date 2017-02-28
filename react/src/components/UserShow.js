@@ -24,10 +24,10 @@ class UserShow extends Component {
       {this.state.approved == true &&
         <span>
         <span> - Approved</span>
-        <span onClick={this.handleClick} className="Approval">  Revoke Approval?</span>
+        <button onClick={this.handleClick} className="Approval">Revoke Approval?</button>
         </span>}
         {this.state.approved == false &&
-          <span onClick={this.handleClick} className="Approval">  Approve Now</span>}
+          <button onClick={this.handleClick} className="Approval">Approve Now</button>}
       </p>
       </div>
     );
