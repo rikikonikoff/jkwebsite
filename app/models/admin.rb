@@ -6,6 +6,8 @@ class Admin < ApplicationRecord
     :trackable,
     :validatable
 
+  has_many :photos
+
   validates :name, presence: true, uniqueness: { scope: :email }
   validates :email, presence: true, uniqueness: true
   validates_email_format_of :email

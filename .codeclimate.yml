@@ -35,12 +35,13 @@ ratings:
   - "**.php"
   - "**.py"
 exclude_paths:
-- config/
-- db/
-- spec/
-- vendor/
-- tmp/
-- public/
+- "config/"
+- "db/"
+- "spec/"
+- "vendor/"
+- "tmp/"
+- "public/"
+- "app/assets/"
 
 ecmaFeatures:
   modules: true

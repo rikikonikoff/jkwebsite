@@ -36,8 +36,8 @@ group :production do
 end
 
 group :test do
-  gem 'coveralls', require: false
   gem "codeclimate-test-reporter"
+  gem 'coveralls', require: false
   gem 'database_cleaner'
   gem "simplecov"
 end

@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   resources :home, only: [:index]
   resources :users, only: [:index]
   resources :publications, only: [:index]
+  resources :photos
 
   namespace :api do
     namespace :v1 do
