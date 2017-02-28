@@ -1,4 +1,5 @@
 a {
+  color: black;
   padding-left: 10px;
   display: inline-block;
   vertical-align: middle;
@@ -12,8 +13,25 @@ a {
 }
 
 a:hover {
+  text-decoration: none;
   -webkit-transform: translateX(8px);
   transform: translateX(8px);
+}
+
+h4 {
+  text-align: center;
+}
+
+form {
+  text-align: center;
+}
+
+input {
+  
+}
+
+.navbar {
+  font-size: 18px;
 }
 
 .publication {

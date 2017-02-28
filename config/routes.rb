@@ -12,14 +12,14 @@ Rails.application.routes.draw do
   }
 
   resources :home, only: [:index]
-  resources :users, only: [:index]
+  resources :users, only: [:index, :show, :update]
   resources :publications, only: [:index]
   resources :photos
 
   namespace :api do
     namespace :v1 do
       resources :publications, only: [:index]
-      resources :users, only: [:index]
+      resources :users, only: [:index, :show, :update]
       resources :wheres_jacobs, only: [:index, :create]
       resources :home, only: [:index]
     end

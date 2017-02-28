@@ -1,8 +1,11 @@
 source 'https://rubygems.org/'
 
+gem 'carrierwave'
 gem 'bootstrap-sass'
 gem 'devise'
+gem 'fog'
 gem 'font-awesome-rails'
+gem 'font-awesome-sass'
 gem 'jquery-rails'
 gem 'pg'
 gem 'puma'

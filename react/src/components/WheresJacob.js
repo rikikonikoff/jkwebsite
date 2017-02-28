@@ -5,11 +5,9 @@ class WheresJacob extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      wheresJacob: null,
-      session: null
+      wheresJacob: null
     };
     this.fetchJacob = this.fetchJacob.bind(this);
-    this.fetchSession = this.fetchSession.bind(this);
   }
 
   fetchJacob() {
@@ -31,42 +29,19 @@ class WheresJacob extends Component {
 
   componentDidMount(){
     this.fetchJacob();
-    this.fetchSession();
     setInterval(this.fetchJacob, 5000);
   }
 
-  fetchSession(){
-    fetch('/api/v1/home', {
-      credentials: 'same-origin'
-    })
-    .then((response) => {
-      if(response.ok) {
-        return response.json();
-      } else {
-        let errorMessage = `${response.status} (${response.statusText})`,
-        error = new Error(errorMessage);
-        throw(error);
-      }
-    })
-    .then((data) => {
-      this.setState({ session: data });
-    })
-    .catch(error => console.error(`Error in fetch: ${error.message}`));
-  }
-
-
-render(){
+  render(){
     return(
       <div>
-      {this.state.session && this.state.session.admin &&
-        <div>
+      {this.props.session &&
         <h2>Jacob is in {this.state.wheresJacob}</h2>
-        <NewWheresJacob />
-        </div>
       }
-      {this.state.session && this.state.session.user &&
+      {this.props.session && this.props.session.admin &&
         <div>
-        <h2>Jacob is in {this.state.wheresJacob}</h2>
+          <br/>
+          <NewWheresJacob />
         </div>
       }
       </div>
