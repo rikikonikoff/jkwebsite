@@ -18,16 +18,20 @@
 
               <% if admin_signed_in? && user_signed_in? %>
                 <p><%= link_to "Admin Log Out", destroy_admin_session_path, method: :delete %></p>
+                <p><%= link_to "Edit Admin Account", edit_admin_registration_path %></p>
                 <p><%= link_to "User Log Out", destroy_user_session_path, method: :delete %></p>
+                <p><%= link_to "Edit User Account", edit_user_registration_path %></p>
                 <p><%= link_to "Where's Jacob?", "/wheresjacob" %></p>
                 <p><%= link_to "Photo Gallery", photos_path %></p>
                 <p><%= link_to "Users", users_path %></p>
               <% elsif user_signed_in? %>
                 <p><%= link_to "Log Out", destroy_user_session_path, method: :delete %></p>
+                <p><%= link_to "Edit My Account", edit_admin_registration_path %></p>
                 <p><%= link_to "Where's Jacob?", "/wheresjacob" %></p>
                 <p><%= link_to "Photo Gallery", photos_path %></p>
               <% elsif admin_signed_in? %>
                 <p><%= link_to "Admin Log Out", destroy_admin_session_path, method: :delete %></p>
+                <p><%= link_to "Edit My Account", edit_admin_registration_path %></p>
                 <p><%= link_to "User Log In", new_user_session_path %></p>
                 <p><%= link_to "Where's Jacob?", "/wheresjacob" %></p>
                 <p><%= link_to "Photo Gallery", photos_path %></p>
