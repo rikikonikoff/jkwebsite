@@ -1,14 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>jkwebsite</title>
-    <%= csrf_meta_tags %>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
+    <%= stylesheet_link_tag    "application", media: 'all' %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-3 col-lg-2">
+          <nav class="navbar navbar-default navbar-fixed-side">
+              <p><%= link_to "Home", root_path %></p>
+
+              <% if user_signed_in? %>
+                <p><%= link_to "Log Out", destroy_user_session_path, method: :delete %></p>
+              <% else %>
+                <p><%= link_to "Log In", new_user_session_path %></p>
+              <% end %>
+
+              <% if admin_signed_in? %>
+                <p><%= link_to "Admin Log Out", destroy_admin_session_path, method: :delete %></p>
+              <% end %>
+
+              <p><%= link_to "Where's Jacob?", "/wheresjacob" %></p>
+
+              <p><%= link_to "Download Jacob's Resume", "/JacobKonikoffResume.pdf" %></p>
+          </nav>
+        </div>
+        <div class="col-xs-9 col-lg-10">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
