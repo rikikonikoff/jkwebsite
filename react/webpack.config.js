@@ -1,7 +1,5 @@
 var config = {
-  entry: {
-    path: './react/src/main.js',
-  },
+  entry: ['whatwg-fetch', './react/src/main.js'],
   output: {
     path: './app/assets/javascripts',
     filename: 'bundle.js'

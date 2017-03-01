@@ -39,7 +39,8 @@
     "redux-form": "^6.5.0",
     "redux-thunk": "^2.2.0",
     "tether": "^1.4.0",
-    "webpack": "^2.2.1"
+    "webpack": "^2.2.1",
+    "whatwg-fetch": "^2.0.2"
   },
   "devDependencies": {
     "bootstrap-sass": "^3.3.7",
