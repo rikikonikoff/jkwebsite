@@ -34,6 +34,7 @@ class Layout extends Component {
     .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
 
+
   render(){
     let children = React.cloneElement(this.props.children, {session: this.state.session});
 
