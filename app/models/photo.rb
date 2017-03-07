@@ -1,5 +1,5 @@
 class Photo < ApplicationRecord
-  belongs_to :admin
+  belongs_to :post
 
   validates :photopath, presence: true, uniqueness: true
 end

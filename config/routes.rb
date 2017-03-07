@@ -14,7 +14,9 @@ Rails.application.routes.draw do
   resources :home, only: [:index]
   resources :users, only: [:index, :show, :update]
   resources :publications, only: [:index]
-  resources :photos
+  resources :posts do
+    resources :photos
+  end
 
   namespace :api do
     namespace :v1 do
