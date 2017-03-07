@@ -6,7 +6,7 @@ import UsersContainer from './containers/UsersContainer';
 import WheresJacob from './components/WheresJacob';
 import AboutJacob from './components/AboutJacob';
 import PostsContainer from './containers/PostsContainer';
-import NewPost from '../components/posts/NewPost';
+import NewPost from './components/NewPost';
 
 let routes = (
   <Route path="/" component={Layout}>
