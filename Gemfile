@@ -1,8 +1,9 @@
 source 'https://rubygems.org/'
 
 gem 'active_model_serializers'
-gem 'carrierwave'
 gem 'bootstrap-sass'
+gem 'carrierwave'
+gem 'cloudinary'
 gem 'devise'
 gem 'font-awesome-rails'
 gem 'font-awesome-sass'

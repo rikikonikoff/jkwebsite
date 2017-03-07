@@ -6,7 +6,6 @@ import UsersContainer from './containers/UsersContainer';
 import WheresJacob from './components/WheresJacob';
 import AboutJacob from './components/AboutJacob';
 import PostsContainer from './containers/PostsContainer';
-import NewPost from './components/NewPost';
 
 let routes = (
   <Route path="/" component={Layout}>
@@ -15,10 +14,7 @@ let routes = (
     <Route path="/publications" component={PublicationsContainer} />
     <Route path="/wheresjacob" component={WheresJacob} />
     <Route path="/users" component={UsersContainer} />
-    <Route path="/users/:id" component={UsersContainer} />
     <Route path="/posts" component={PostsContainer} />
-    <Route path="/posts/:id" component={PostsContainer} />
-    <Route path="/posts/new" component={NewPost} />
   </Route>
 );
 

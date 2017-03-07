@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
 import PostShow from './PostShow';
-import NewPost from './NewPost';
 
 class PostsIndex extends Component {
   constructor(props){
@@ -57,12 +55,7 @@ class PostsIndex extends Component {
     });
     return(
       <div>
-      {this.props.session &&
-        <div>{posts}</div>
-      }
-      {this.props.session && this.props.session.admin &&
-        <Link to="/posts/new" component={NewPost}>New Post</Link>
-      }
+        {posts}
       </div>
     );
   }
