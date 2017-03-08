@@ -22,7 +22,7 @@ Rails.application.routes.draw do
       resources :users, only: [:index, :show, :update]
       resources :wheres_jacobs, only: [:index, :create]
       resources :home, only: [:index]
-      resources :posts
+      resources :posts, only: [:index, :show]
     end
   end
 end

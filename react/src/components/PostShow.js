@@ -6,7 +6,6 @@ const PostShow = (props) => {
   let handleClick = (id) => {
     props.handleClick(props.id);
   };
-  
   let details;
   if (props.selectedPostId === props.id) {
     details = <div className="postDetails">

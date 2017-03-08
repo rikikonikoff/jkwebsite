@@ -19,14 +19,16 @@ class NewPost extends Component {
 
   handleImageUpload(files) {
     let requests = files.map(file => {
-      let upload = request.post('ENV[CLOUDINARY_BASE_URL]')
-        .field('upload_preset', 'ENV[CLOUDINARY_UPLOAD_PRESET]')
-        .field('file', file);
-      upload.end((err, response) => {
-        if (err) {
-          console.error(err);
-        }
-      });
+      return(
+        request.post('ENV[CLOUDINARY_BASE_URL]')
+          .field('upload_preset', 'ENV[CLOUDINARY_UPLOAD_PRESET]')
+          .field('file', file);
+        request.end((err, response) => {
+          if (err) {
+            console.error(err);
+          }
+        });
+      )
     });
   }
 

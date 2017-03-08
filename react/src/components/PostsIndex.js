@@ -43,7 +43,7 @@ class PostsIndex extends Component {
 
   render(){
     let posts = this.state.posts.map(post => {
-      <PostShow
+      return(<PostShow
         key={post.id}
         id={post.id}
         title={post.title}
@@ -51,7 +51,7 @@ class PostsIndex extends Component {
         photos={post.photos}
         date={post.created_at}
         selectedPostId={this.state.selectedPostId}
-      />
+      />);
     });
     return(
       <div>
