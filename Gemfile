@@ -1,9 +1,10 @@
 source 'https://rubygems.org/'
 
-gem 'carrierwave'
+gem 'active_model_serializers'
 gem 'bootstrap-sass'
+gem 'carrierwave'
+gem 'cloudinary'
 gem 'devise'
-gem 'fog'
 gem 'font-awesome-rails'
 gem 'font-awesome-sass'
 gem 'jquery-rails'
