@@ -1,6 +1,7 @@
 <%= cloudinary_js_config %>
+<script src="//widget.cloudinary.com/global/all.js" type="text/javascript"></script>
 
-<%= form_for(@post, html: { multipart: true }) do |f| %>
+<%= form_for(@post, remote: true, format: :json, html: { multipart: true }) do |f| %>
   <%= f.label :title %>
   <br/>
   <%= f.text_field :title, style: "width: 80%;" %>
@@ -11,48 +12,8 @@
   <br/>
   <strong>Add Photos:</strong>
   <br/>
-  <%= f.cl_image_upload :photos, multiple: true %>
+  <%= f.file_field :photos, multiple: true %>
   <br/>
-
-  <div>
-    <% if @post.photos.any? %>
-      Delete photos<br /><br />
-      <%= check_box_tag "select_all" %> Select all <br />
-      <% @post.photos.each do |photo| %>
-        <%= check_box_tag photo.id, "delete" %>
-        <%= cl_image_tag(photo.image.thumb.url) %>
-        <br />
-      <% end %>
-    <% end %>
-  </div>
 
   <%= f.submit "Post" %>
 <% end %>
-
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('#select_all').click(function(event) {  //on click
-        if(this.checked) { // check select status
-          $('form input:checkbox').each(function() { //loop through each checkbox
-            this.checked = true;  //select all checkboxes with class "checkbox1"
-          });
-        }else{
-          $('form input:checkbox').each(function() { //loop through each checkbox
-            this.checked = false; //deselect all checkboxes with class "checkbox1"
-          });
-        }
-      });
-      $('.cloudinary-fileupload').cloudinary_fileupload().on('cloudinarydone', function(e, data){
-        $('#preview_images').append($.cloudinary.image(data.result.public_id, {width: 50, height: 50, crop: "fill"}));
-      })
-      .on('cloudinaryprogressall', function(e, data){
-        $('#progress_bar_box').show();
-        var percents = Math.round((data.loaded * 100.0) / data.total) + '%'
-        $('#progress_percents').text(percents)
-        $('#progress_bar').css('width', percents);
-      })
-      .on('fileuploadstop', function(){
-        $('#progress_bar_box').hide();
-      });
-    });
-  </script>

@@ -1,7 +1,0 @@
-class Post::PhotoUploader < CarrierWave::Uploader::Base
-  include Cloudinary::CarrierWave
-
-  def public_id
-    return post.photo
-  end
-end
