@@ -14,6 +14,9 @@
       <div class="row">
         <%= render "layouts/navbar" %>
         <div class="col-xs-9 col-sm-10">
+          <% flash.each do |key, value| %>
+            <%= value %>
+          <% end %>
           <%= yield %>
         </div>
       </div>

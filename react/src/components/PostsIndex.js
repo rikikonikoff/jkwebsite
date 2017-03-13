@@ -9,7 +9,7 @@ class PostsIndex extends Component {
       selectedPostId: null
     };
     this.fetchPosts = this.fetchPosts.bind(this);
-    this.handleClick = this.handleClick.bind(this);
+    this.handlePostClick = this.handlePostClick.bind(this);
   }
 
   fetchPosts(){
@@ -29,11 +29,11 @@ class PostsIndex extends Component {
     .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
 
-  handleClick(id) {
-    if (this.state.selectedPublicationId === id) {
-      this.setState({ selectedPublicationId: null });
+  handlePostClick(id) {
+    if (this.state.selectedPostId === id) {
+      this.setState({ selectedPostId: null });
     } else {
-      this.setState({ selectedPublicationId: id });
+      this.setState({ selectedPostId: id });
     }
   }
 
@@ -50,7 +50,8 @@ class PostsIndex extends Component {
         body={post.body}
         photos={post.photos}
         date={post.created_at}
-        selectedPostId={this.state.selectedPostId}
+        selected={this.state.selectedPostId}
+        handleClick={this.handlePostClick}
       />);
     });
     return(

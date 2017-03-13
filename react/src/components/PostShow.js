@@ -1,17 +1,27 @@
 import React from 'react';
-import { Link, BrowserHistory } from 'react-router';
-import BackButton from './BackButton';
+import PhotoShow from './PhotoShow';
 
 const PostShow = (props) => {
   let handleClick = (id) => {
     props.handleClick(props.id);
   };
+
+  let photos = props.photos.map(photo => {
+    return(
+      <PhotoShow
+        key={photo.id}
+        path={photo.url}
+        thumb={photo.thumb.url}
+      />
+    );
+  });
+
   let details;
-  if (props.selectedPostId === props.id) {
+  if (props.selected === props.id) {
     details = <div className="postDetails">
       {props.body}
       <br/>
-      {props.photos}
+      {photos}
     </div>;
   }
 
