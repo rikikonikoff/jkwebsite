@@ -4,8 +4,8 @@ class DeletePhotos < ActiveRecord::Migration[5.0]
   end
 
   def down
-    create_table do |t|
-      t.string :photopath
+    create_table :photos do |t|
+      t.string :caption
       t.belongs_to :post
     end
   end

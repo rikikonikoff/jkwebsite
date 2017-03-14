@@ -9,6 +9,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    binding.pry
     if @post.save
       flash[:notice] = "Blog posted!"
       redirect_to posts_path
@@ -19,11 +20,11 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
+    set_post
   end
 
   def update
-    @post = Post.find(params[:id])
+    set_post
     if @post.update_attributes(post_params)
       flash[:notice] = "Post updated successfully!"
       redirect_to posts_path
@@ -34,14 +35,22 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
+    set_post
     @post.destroy
     redirect_to posts_path
   end
 
   private
 
+  def set_post
+    @post = Post.find(params[:id])
+  end
+
   def post_params
-    params.require(:post).permit(:title, :body, {photos: []})
+    params.require(:post).permit(
+      :title,
+      :body,
+      photos_attributes: [:id, :caption, :photo, :_destroy]
+    )
   end
 end
