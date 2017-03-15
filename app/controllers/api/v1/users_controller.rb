@@ -1,12 +1,9 @@
 class Api::V1::UsersController < ApplicationController
+  before_action :authenticate_admin!
+
   def index
     @users = User.order("approved", "updated_at DESC")
     render json: @users
-  end
-
-  def show
-    @user = User.find(params[:id])
-    render json: @user
   end
 
   def update
