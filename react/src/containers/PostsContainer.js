@@ -9,7 +9,10 @@ const PostsContainer = props => {
         <div>
           <h2>Blog Posts</h2>
           {props.session && props.session.admin &&
-            <a href="/posts/new">New Post</a>
+            <div>
+              <a href="/posts/new">New Post</a>
+              <br/>
+            </div>
           }
           <br/>
           <PostsIndex />

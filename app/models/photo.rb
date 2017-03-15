@@ -1,6 +1,13 @@
 class Photo < ApplicationRecord
   belongs_to :post
+  mount_uploader :image, ImageUploader
 
-  validates :post_id, presence: true
-  validates :photopath, presence: true, uniqueness: true
+  validates :image, presence: true
+
+  def image=(val)
+    if !val.is_a?(String) && valid?
+      image_will_change!
+      super
+    end
+  end
 end

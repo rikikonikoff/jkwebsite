@@ -67,7 +67,7 @@ input:-webkit-autofill {
   text-align: center;
 }
 
-.publication {
+.publication, .post {
   padding: 10px;
   display: inline-block;
   vertical-align: middle;
@@ -80,7 +80,13 @@ input:-webkit-autofill {
   transition-property: transform;
 }
 
-.publication:hover {
+.publication:hover, .post:hover {
   -webkit-transform: translateX(8px);
   transform: translateX(8px);
+}
+
+.details {
+  padding: 10px;
+  display: inline-block;
+  vertical-align: middle;
 }

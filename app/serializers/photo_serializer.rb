@@ -1,5 +1,3 @@
 class PhotoSerializer < ActiveModel::Serializer
-  attributes :id, :photopath
-
-  belongs_to :post
+  attributes :id, :caption, :photo
 end
