@@ -10,7 +10,8 @@ class RegistrationsController < Devise::RegistrationsController
   def create
     @user = User.new(sign_up_params)
     if @user.save
-      flash[:notice] = "You created an account! You just need to wait for Jacob to approve you before you can log in."
+      flash[:notice] = "You created an account!
+      You just need to wait for Jacob to approve you before you can log in."
       redirect_to root_path
     else
       flash[:notice] = @user.errors.full_messages.to_sentence
@@ -33,6 +34,12 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def user_params
-    params.require(:user).permit(:name, :email, :current_password, :password, :password_confirmation)
+    params.require(:user).permit(
+      :name,
+      :email,
+      :current_password,
+      :password,
+      :password_confirmation
+      )
   end
 end
