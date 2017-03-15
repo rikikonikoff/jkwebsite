@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe HomeController, type: :controller do
+RSpec.describe PhotosController, type: :controller do
   describe "#index" do
     it "returns http success" do
-      get :index
+      get :index, post_id: 1
       expect(response).to have_http_status(:success)
     end
   end
