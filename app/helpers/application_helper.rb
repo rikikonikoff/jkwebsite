@@ -15,7 +15,7 @@ module ApplicationHelper
     if options.include? :locals
       locals = options[:locals]
     else
-      locals = { }
+      locals = {}
     end
 
     if options.include? :partial
@@ -27,13 +27,13 @@ module ApplicationHelper
     # Render the form fields from a file with the association name provided
     new_object = f.object.class.reflect_on_association(association).klass.new
     fields = f.fields_for(association, new_object, child_index: 'new_record') do |builder|
-      render(partial, locals.merge!( f: builder))
+      render(partial, locals.merge!(f: builder))
     end
 
     # The rendered fields are sent with the link within the data-form-prepend attr
-    html_options['data-form-prepend'] = raw CGI::escapeHTML( fields )
+    html_options['data-form-prepend'] = raw CGI::escapeHTML(fields)
     html_options['href'] = '#'
 
-    content_tag(:a, name, html_options, &block) 
+    content_tag(:a, name, html_options, &block)
   end
 end

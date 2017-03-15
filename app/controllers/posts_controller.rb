@@ -5,11 +5,13 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    @photos = []
+    2.times { @photos << @post.photos.build }
   end
 
   def create
     @post = Post.new(post_params)
-    binding.pry
+    @photos = @post.photos
     if @post.save
       flash[:notice] = "Blog posted!"
       redirect_to posts_path
@@ -21,10 +23,12 @@ class PostsController < ApplicationController
 
   def edit
     set_post
+    @photos = @post.photos
   end
 
   def update
     set_post
+    @photos = @post.photos
     if @post.update_attributes(post_params)
       flash[:notice] = "Post updated successfully!"
       redirect_to posts_path
@@ -50,7 +54,7 @@ class PostsController < ApplicationController
     params.require(:post).permit(
       :title,
       :body,
-      photos_attributes: [:id, :caption, :photo, :_destroy]
+      photos_attributes: [:id, :caption, :image, :_destroy]
     )
   end
 end

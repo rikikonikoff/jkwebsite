@@ -1,10 +1,12 @@
 class Photo < ApplicationRecord
-  mount_uploader :photo, PhotoUploader
   belongs_to :post
+  mount_uploader :image, ImageUploader
 
-  def photo=(val)
+  validates :image, presence: true
+
+  def image=(val)
     if !val.is_a?(String) && valid?
-      photo_will_change!
+      image_will_change!
       super
     end
   end

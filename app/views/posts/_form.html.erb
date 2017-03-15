@@ -9,10 +9,13 @@
   <br/>
   <strong>Add Photos:</strong>
   <br/>
-  <% f.fields_for :photos do |photo| %>
-    <%= render "photo_fields", f: photo %>
-    <%= link_to_add_fields "Add another photo", f, :photos %>
+  <% @photos.each do |photo| %>
+    <% f.fields_for photo do |ff| %>
+      <%= render "photo_fields", f: ff %>
+    <% end %>
+    <br/>
   <% end %>
+  <%= link_to_add_fields "Add another photo", f, @photos %>
   <br/>
 
   <%= f.submit "Post" %>
