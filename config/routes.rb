@@ -12,10 +12,10 @@ Rails.application.routes.draw do
   }, skip: :passwords
 
   resources :home, only: [:index]
-  resources :users, only: [:index, :show, :update]
+  resources :users, only: [:index]
   resources :publications, only: [:index]
   resources :posts do
-    resources :photos
+    resources :photos, only: [:index]
   end
 
   namespace :api do
