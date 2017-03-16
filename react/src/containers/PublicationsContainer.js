@@ -1,5 +1,5 @@
 import React, { Component }  from 'react';
-import Publication from '../components/Publication';
+import PublicationsIndex from '../components/PublicationsIndex';
 
 class PublicationsContainer extends Component {
   constructor(props) {
@@ -37,33 +37,14 @@ class PublicationsContainer extends Component {
   }
 
   render() {
-    let publications = this.state.publications.map(pub => {
-      return(
-        <Publication
-          key={pub.id}
-          id={pub.id}
-          authors={pub.authors}
-          date={pub.date}
-          title={pub.title}
-          journal={pub.journal}
-          issue={pub.issue}
-          pages={pub.pages}
-          abstract={pub.abstract}
-          background={pub.background}
-          methods={pub.methods}
-          results={pub.results}
-          methodsAndFindings={pub.methods_and_findings}
-          conclusions={pub.conclusions}
-          externalLink={pub.external_link}
-          handleClick={this.handleClick}
-          selected={this.state.selectedPublicationId}
-        />
-      );
-    });
     return(
       <div className="publications">
         <h2> Publications </h2>
-        {publications}
+        <PublicationsIndex
+          publications={this.state.publications}
+          handleClick={this.handleClick}
+          selectedPublicationId={this.state.selectedPublicationId}
+        />
         {this.props.children}
       </div>
     );

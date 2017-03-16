@@ -10,7 +10,7 @@ const Publication = (props) => {
   let details;
   if (props.selected === props.id) {
     details =
-      <p className="publicationDetails">
+      <div className="publicationDetails">
         <br/>
         {props.abstract &&
           <p><i>Abstract</i>: {props.abstract}</p>}
@@ -24,7 +24,7 @@ const Publication = (props) => {
           <p><i>Methods and Findings</i>: {props.methodsAndFindings}</p>}
         {props.conclusions &&
           <p><i>Conclusions</i>: {props.conclusions}</p>}
-      </p>;
+      </div>;
   }
 
   return(
