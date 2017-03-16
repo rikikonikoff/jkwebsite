@@ -4,7 +4,7 @@ RSpec.feature "posts" do
   let!(:jacob) { FactoryGirl.create(:admin, name: "Jacob Konikoff") }
 
   scenario "admin creates a new post" do
-    login_as(jacob)
+    sign_in(jacob)
     visit "/posts/new"
     fill_in "Title", with: "My First Post"
     click_link "add photo fields"

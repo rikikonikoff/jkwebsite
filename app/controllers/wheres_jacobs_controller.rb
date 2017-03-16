@@ -1,5 +1,5 @@
 class WheresJacobsController < ApplicationController
-  before_action :authenticate_user! || :authenticate_admin!
-  
-  def index; end
+  def index
+    authenticate_admin! || authenticate_user!
+  end
 end
