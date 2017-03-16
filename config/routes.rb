@@ -15,16 +15,16 @@ Rails.application.routes.draw do
   resources :users, only: [:index]
   resources :publications, only: [:index]
   resources :posts do
-    resources :photos, only: [:index]
+    resources :photos, only: [:index, :create]
   end
 
   namespace :api do
     namespace :v1 do
       resources :publications, only: [:index]
-      resources :users, only: [:index, :show, :update]
+      resources :users, only: [:index, :update]
       resources :wheres_jacobs, only: [:index, :create]
       resources :home, only: [:index]
-      resources :posts, only: [:index, :show]
+      resources :posts, only: [:index]
     end
   end
 end

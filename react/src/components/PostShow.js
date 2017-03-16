@@ -10,8 +10,9 @@ const PostShow = (props) => {
     return(
       <PhotoShow
         key={photo.id}
-        path={photo.url}
-        thumb={photo.thumb.url}
+        caption={photo.caption}
+        path={photo.image.url}
+        thumb={photo.image.thumb.url}
       />
     );
   });

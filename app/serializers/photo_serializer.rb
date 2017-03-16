@@ -1,3 +1,3 @@
 class PhotoSerializer < ActiveModel::Serializer
-  attributes :id, :caption, :photo
+  attributes :id, :caption, :image
 end
