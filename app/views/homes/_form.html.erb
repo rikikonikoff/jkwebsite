@@ -4,7 +4,7 @@
     <%= f.text_area :about, style: "width: 90%; height: 300px;" %>
     <br/><br/>
     <h4>Profile Picture</h4>
-    <% if @home.image %>
+    <% unless @home.image.blank? %>
       <%= render "optional_fields" %>
     <% end %>
     <%= f.file_field :image %>
