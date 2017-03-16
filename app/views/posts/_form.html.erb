@@ -1,22 +1,22 @@
-<%= form_for(@post, html: {:multipart => true}) do |f| %>
-  <%= f.label :title %>
-  <br/>
-  <%= f.text_field :title, style: "width: 80%;" %>
-  <br/>
-  <%= f.label :body, "Content" %>
-  <br/>
-  <%= f.text_area :body, style: "width: 90%; height: 500px;" %>
-  <br/>
-  <strong>Add Photos:</strong>
-  <br/>
-  <% @photos.each do |photo| %>
-    <% f.fields_for photo do |ff| %>
-      <%= render "photo_fields", f: ff %>
-    <% end %>
+<div>
+  <%= form_for(@post, html: {:multipart => true}) do |f| %>
+    <%= f.label :title %>
     <br/>
+    <%= f.text_field :title, style: "width: 80%;" %>
+    <br/>
+    <%= f.label :body, "Content" %>
+    <br/>
+    <%= f.text_area :body, style: "width: 90%; height: 500px;" %>
+    <br/>
+    <strong>Photos:</strong>
+    <br/>
+    <div>
+      <% f.fields_for :photos do |photo| %>
+      <% end %>
+      <%= link_to_add_association "add photo fields", f, :photos %>
+      <br/>
+    </div>
+    <br/>
+    <%= f.submit "Post" %>
   <% end %>
-  <%= link_to_add_fields "Add another photo", f, @photos %>
-  <br/>
-
-  <%= f.submit "Post" %>
-<% end %>
+</div>

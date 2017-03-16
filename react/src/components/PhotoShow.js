@@ -3,7 +3,7 @@ import React from 'react';
 const PhotoShow = (props) => {
   return(
     <div>
-      <img src={props.url}/>
+      <img src={props.path}/>
     </div>
   );
 };

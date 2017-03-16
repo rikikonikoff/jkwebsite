@@ -67,6 +67,7 @@ GEM
       mime-types (>= 1.16)
     case_transform (0.2)
       activesupport
+    cocoon (1.2.9)
     codeclimate-test-reporter (1.0.6)
       simplecov
     coderay (1.1.1)
@@ -280,6 +281,7 @@ DEPENDENCIES
   bootstrap-sass
   capybara
   carrierwave
+  cocoon
   codeclimate-test-reporter
   coveralls
   database_cleaner

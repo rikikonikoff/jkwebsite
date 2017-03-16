@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import BackButton from './BackButton.js';
+import BackButton from '../components/BackButton.js';
 
 class Layout extends Component {
   constructor(props){
@@ -33,7 +33,6 @@ class Layout extends Component {
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
-
 
   render(){
     let children = React.cloneElement(this.props.children, {session: this.state.session});
