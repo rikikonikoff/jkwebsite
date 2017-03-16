@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import UserShow from './UserShow';
+import fetchGetRequest from '../utils/fetchGet';
+import fetchPostRequest from '../utils/fetchPost';
 
 class UsersIndex extends Component {
   constructor(props){
