@@ -12,6 +12,7 @@
     <br/>
     <div>
       <% f.fields_for :photos do |photo| %>
+        <%= render "photo_fields", f: photo %>
       <% end %>
       <%= link_to_add_association "add photo fields", f, :photos %>
       <br/>

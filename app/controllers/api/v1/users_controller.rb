@@ -7,7 +7,7 @@ class Api::V1::UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     @user.update_attributes(approve_params)
-    render json: User.all
+    render json: User.order("approved", "updated_at DESC")
   end
 
   private
