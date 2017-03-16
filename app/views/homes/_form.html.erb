@@ -1,0 +1,18 @@
+<div id="about-jacob">
+  <%= form_for @home do |f| %>
+    <h4>About Me</h4>
+    <%= f.text_area :about, style: "width: 90%; height: 300px;" %>
+    <br/><br/>
+    <h4>Profile Picture</h4>
+    Previously Saved Picture:
+    <br/>
+    <%= image_tag @home.image.url :thumb %>
+    <br/><br/>
+    Choose a different file (optional):
+    <%= f.file_field :image %>
+    <%= f.hidden_field :image_cache %>
+    <br/>
+    <br/>
+    <%= f.submit "Submit" %>
+  <% end %>
+</div>

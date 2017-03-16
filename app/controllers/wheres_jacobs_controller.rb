@@ -1,9 +1,5 @@
 class WheresJacobsController < ApplicationController
-  def index; end
-
-  def show; end
-
-  def new; end
-
-  def create; end
+  def index
+    authenticate_admin! || authenticate_user!
+  end
 end

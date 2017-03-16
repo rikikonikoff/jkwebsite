@@ -10,7 +10,8 @@ const UsersContainer = (props) => {
           <h2>Users</h2>
           <br/>
           <UsersIndex />
-        </div>}
+        </div>
+      }
     </div>
   );
 };

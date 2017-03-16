@@ -1,5 +1,5 @@
 class RegistrationsController < Devise::RegistrationsController
-  before_action :configure_sign_up_params, only: :create
+  before_action :configure_params, only: [:create, :update]
   before_action :authenticate_user!, except: [:new, :create]
   respond_to :html, :json
 
@@ -9,7 +9,14 @@ class RegistrationsController < Devise::RegistrationsController
 
   def create
     @user = User.new(sign_up_params)
-    @user.save
+    if @user.save
+      flash[:notice] = "You created an account!
+      You just need to wait for Jacob to approve you before you can log in."
+      redirect_to root_path
+    else
+      flash[:notice] = @user.errors.full_messages.to_sentence
+      render :new
+    end
   end
 
   def edit
@@ -18,15 +25,21 @@ class RegistrationsController < Devise::RegistrationsController
 
   def update
     @user = current_user
+    if @user.update_attributes(user_params)
+      flash[:notice] = "Update successful!"
+      redirect_to root_path
+    else
+      flash[:notice] = @user.errors.full_messages.to_sentence
+    end
   end
 
-  private
-
-  def configure_sign_up_params
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :email, :password, :password_confirmation])
-  end
-
-  def after_update_path_for(resource)
-    root_path
+  def user_params
+    params.require(:user).permit(
+      :name,
+      :email,
+      :current_password,
+      :password,
+      :password_confirmation
+      )
   end
 end

@@ -5,10 +5,12 @@ const Publication = (props) => {
     props.handleClick(props.id);
   };
 
+  let publishedInfo = `${props.journal} ${props.issue}, ${props.pages}`;
+
   let details;
   if (props.selected === props.id) {
     details =
-      <p className="publicationDetails">
+      <div className="publicationDetails">
         <br/>
         {props.abstract &&
           <p><i>Abstract</i>: {props.abstract}</p>}
@@ -22,16 +24,17 @@ const Publication = (props) => {
           <p><i>Methods and Findings</i>: {props.methodsAndFindings}</p>}
         {props.conclusions &&
           <p><i>Conclusions</i>: {props.conclusions}</p>}
-      </p>;
+      </div>;
   }
-
-  let publishedInfo = `${props.journal} ${props.issue}, ${props.pages}`;
 
   return(
     <div className="panel panel-default">
       <div onClick={handleClick} className="publication" title="Click to Expand">
         <strong>{props.title} ({props.date})</strong><br/><br/>
-        <i>Authors</i>: {props.authors} <br/><br/>
+        <i>Authors</i>: {props.authors} <br/>
+      </div>
+      <br/>
+      <div className="details">
         <i>Published</i>:
         <a href={props.externalLink} title="Visit Link">
           {publishedInfo}

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170228040027) do
+ActiveRecord::Schema.define(version: 20170316183143) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,10 +33,23 @@ ActiveRecord::Schema.define(version: 20170228040027) do
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
   end
 
+  create_table "homes", force: :cascade do |t|
+    t.text   "about"
+    t.string "image"
+  end
+
   create_table "photos", force: :cascade do |t|
-    t.integer "admin_id"
-    t.string  "photopath"
-    t.index ["admin_id"], name: "index_photos_on_admin_id", using: :btree
+    t.string  "caption"
+    t.integer "post_id"
+    t.string  "image"
+    t.index ["post_id"], name: "index_photos_on_post_id", using: :btree
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "title",      null: false
+    t.text     "body"
   end
 
   create_table "publications", force: :cascade do |t|

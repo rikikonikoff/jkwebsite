@@ -6,6 +6,7 @@
 
     <%= stylesheet_link_tag    "application", media: 'all' %>
     <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag :cocoon %>
     <%= csrf_meta_tags %>
   </head>
 
@@ -14,6 +15,9 @@
       <div class="row">
         <%= render "layouts/navbar" %>
         <div class="col-xs-9 col-sm-10">
+          <% flash.each do |key, value| %>
+            <%= value %>
+          <% end %>
           <%= yield %>
         </div>
       </div>
