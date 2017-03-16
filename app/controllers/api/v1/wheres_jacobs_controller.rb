@@ -14,7 +14,7 @@ class Api::V1::WheresJacobsController < ApplicationController
       redirect_to "/wheresjacob"
     else
       flash[:notice] = @where.errors.full_messages.to_sentence
-      render :index
+      render "wheres_jacobs/index"
     end
   end
 

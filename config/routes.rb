@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     sessions: 'sessions'
   }, skip: :passwords
 
-  resources :home, only: [:index]
+  resources :home, except: [:destroy]
   resources :users, only: [:index]
   resources :publications, only: [:index]
   resources :posts do

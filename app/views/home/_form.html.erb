@@ -1,0 +1,14 @@
+<div id="about-jacob">
+  <%= form_for @home do |f| %>
+    <%= f.label :about %>
+    <%= f.text_area :about, style: "width: 90%; height: 300px;" %>
+    <br/>
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+    <% if @post.image %>
+      <%= @post.image.thumb %>
+    <% end %>
+    <br/>
+    <%= f.submit "Submit" %>
+  <% end %>
+</div>

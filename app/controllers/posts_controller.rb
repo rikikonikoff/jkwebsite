@@ -1,11 +1,12 @@
 class PostsController < ApplicationController
-  def index; end
+  before_action(:authenticate_user! || :authenticate_admin!), only: [:index]
+  before_action :authenticate_admin!, except: [:index]
 
-  def show; end
+  def index; end
 
   def new
     @post = Post.new
-    @post.photos.build
+    2.times { @post.photos.build }
   end
 
   def create
