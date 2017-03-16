@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20170316183143) do
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
   end
 
-  create_table "home", force: :cascade do |t|
+  create_table "homes", force: :cascade do |t|
     t.text   "about"
     t.string "image"
   end

@@ -1,5 +1,5 @@
 class Home < ApplicationRecord
   mount_uploader :image, ImageUploader
 
-  valiates :about, presence: true
+  validates :about, presence: true
 end

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'home#index'
+  root 'homes#index'
   get "/wheresjacob", to: "wheres_jacobs#index", as: "wheres_jacobs"
 
   devise_for :users, controllers: {
@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     sessions: 'sessions'
   }, skip: :passwords
 
-  resources :home, except: [:destroy]
+  resources :homes, except: [:destroy]
   resources :users, only: [:index]
   resources :publications, only: [:index]
   resources :posts do
