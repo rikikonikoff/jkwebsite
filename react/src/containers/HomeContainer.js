@@ -40,9 +40,11 @@ class HomeContainer extends Component {
           imageUrl={this.state.imageUrl}
           imageThumb={this.state.imageThumb}
         />
-        {this.state.about !== "" &&
+        {this.props.session && this.props.session.admin &&
+          this.state.about !== "" &&
           <a href="homes/1/edit">Change what people see here</a>}
-        {this.state.about === "" &&
+        {this.props.session && this.props.session.admin &&
+          this.state.about === "" &&
           <a href="/homes/new">Change what people see here</a>}
       </div>
     );
