@@ -3,7 +3,7 @@ class AdminMailer < ApplicationMailer
     @user = user.name
     @url = users_url
     mail(
-      to: Admin.find_by(name: "Jacob Konikoff").email,
+      to: 'jacob@konikoff.com',
       subject: 'You have a new user awaiting approval'
     )
   end
