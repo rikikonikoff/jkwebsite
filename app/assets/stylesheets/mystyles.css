@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed|Open+Sans|PT+Sans|Gentium+Book+Basic');
+
 a {
-  color: black;
+  color: #1F0A1D;
   padding-left: 10px;
   display: inline-block;
   vertical-align: middle;
@@ -13,6 +15,7 @@ a {
 }
 
 a:hover {
+  color: #1F0A1D;
   text-decoration: none;
   -webkit-transform: translateX(8px);
   transform: translateX(8px);
@@ -25,20 +28,36 @@ a:hover {
 h1 {
   text-align: center;
   font-size: 6vw;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  color: #E5EAD4
 }
 
 h2 {
   text-align: center;
-  font-size: 4vw;
+  font-size: 3.5vw;
+  color: #E5EAD4;
+  font-family: 'Avenir';
+  font-weight: 100;
 }
 
 h3{
   font-size: 3vw;
+  color: #E5EAD4;
+  font-family: 'Avenir';
 }
 
 h4 {
   text-align: center;
   font-size: 2vw;
+  color: #E5EAD4;
+  font-family: 'Avenir';
+}
+
+body {
+  background-color: #334F53;
+  color: #E5EAD4;
+  font-family: 'Avenir';
 }
 
 form {
@@ -58,7 +77,7 @@ input#user_password_confirmation, input#user_current_password {
 }
 
 input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  -webkit-box-shadow: 0 0 0px 1000px #F2F0DF inset;
 }
 
 .navbar {
@@ -67,12 +86,68 @@ input:-webkit-autofill {
   min-height: 100vh;
 }
 
+nav a {
+  color: #1F0A1D;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bolder;
+  padding-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+
+nav a:hover {
+  color: #1F0A1D;
+  text-decoration: none;
+  -webkit-transform: translateX(8px);
+  transform: translateX(8px);
+}
+
+nav {
+  background-color: #45936C;
+  color: #1F0A1D;
+  font-size: 1.5vmax;
+  padding-right: 5px;
+}
+
 .nested-fields {
   display: inline-flex;
 }
 
 .notice {
   text-align: center;
+}
+
+.panel {
+  background-color: #9ACC77;
+  color: #213435;
+  border: none;
+  font-family: 'Avenir';
+}
+
+.panel a {
+  padding: 5px;
+  color: #213435;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+
+.panel a:hover {
+  -webkit-transform: translateX(8px);
+  transform: translateX(8px);
 }
 
 .publication, .post {
@@ -101,4 +176,5 @@ input:-webkit-autofill {
 
 .resizable-image {
   width: 100%;
+  border-radius: 3px;
 }
