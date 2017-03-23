@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed|Open+Sans|PT+Sans|Gentium+Book+Basic');
 
 a {
-  color: #1F0A1D;
+  color: #9ACC77;
   padding-left: 10px;
   display: inline-block;
   vertical-align: middle;
@@ -15,7 +15,7 @@ a {
 }
 
 a:hover {
-  color: #1F0A1D;
+  color: #9ACC77;
   text-decoration: none;
   -webkit-transform: translateX(8px);
   transform: translateX(8px);
@@ -23,6 +23,23 @@ a:hover {
 
 #addPhoto {
   display: inline-block;
+}
+
+.btn {
+  padding: 3px;
+  margin: 6px;
+}
+
+.btn-default {
+  background-color: #E5EAD4;
+  color: #334F53;
+  border-color: #45936C;
+}
+
+.btn-default:hover {
+  background-color: #9ACC77;
+  color: #334F53;
+  border-color: #45936C;
 }
 
 h1 {
@@ -68,16 +85,20 @@ form {
   outline: none;
 }
 
-input#admin_email, input#admin_password, input#admin_password_confirmation,
+input, input#admin_email, input#admin_password, input#admin_password_confirmation,
 input#admin_current_password, input#user_email, input#user_password,
 input#user_password_confirmation, input#user_current_password {
   width: 160px;
   padding-left: 5px;
   padding-right: 5px;
+  background-color: #E5EAD4;
+  color: #334F53;
+  border-radius: 3px;
+  border: none;
 }
 
 input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px #F2F0DF inset;
+  -webkit-box-shadow: 0 0 0px 1000px #E5EAD4 inset;
 }
 
 .navbar {

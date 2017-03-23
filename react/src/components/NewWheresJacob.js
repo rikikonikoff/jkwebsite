@@ -42,7 +42,9 @@ class NewWheresJacob extends Component {
       <form>
         <label>I am in...</label>
         <input onChange={this.handleChange} value={this.state.location} />
-        <button onClick={this.handleSubmit}>Submit</button>
+        <button onClick={this.handleSubmit} className='btn btn-default'>
+          Submit
+        </button>
       </form>
       </div>
     );
