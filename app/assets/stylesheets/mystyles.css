@@ -98,6 +98,10 @@ input#user_password_confirmation, input#user_current_password {
   border: none;
 }
 
+input#user_remember_me, input#admin_remember_me {
+  width: 12px;
+}
+
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px #E5EAD4 inset;
 }
