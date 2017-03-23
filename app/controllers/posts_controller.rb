@@ -1,9 +1,7 @@
 class PostsController < ApplicationController
   before_action :authenticate_admin!, except: [:index]
 
-  def index
-    authenticate_admin! || authenticate_user!
-  end
+  def index; end
 
   def new
     @post = Post.new
