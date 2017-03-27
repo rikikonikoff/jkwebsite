@@ -1,3 +1,5 @@
+var webpack = require('webpack');
+
 var config = {
   entry: ['whatwg-fetch', './react/src/main.js'],
   output: {
@@ -5,23 +7,34 @@ var config = {
     filename: 'bundle.js'
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        use: [
+          {
+            loader: 'babel-loader'
+          }
+        ]
       }
     ]
   },
-  devtool: 'eval-source-map'
+  resolve: {
+    extensions: ['', '.json', '.jsx', '.js']
+  },
+  devtool: 'eval-source-map',
+  plugins: []
 };
 
-if (process.env.NODE_ENV === 'production') {
-  delete config.devtool;
-  var webpack = require('webpack');
-  config.plugins = [
-    new webpack.DefinePlugin({ 'process.env.NODE_ENV': '"production"' })
-  ];
+switch(process.env.NODE_ENV) {
+  case 'development':
+    config.plugins.push(new webpack.DefinePlugin({ 'process.env.NODE_ENV': '"development"' }));
+  case 'staging':
+    delete config.devtool;
+    config.plugins.push(new webpack.DefinePlugin({ 'process.env.NODE_ENV': '"staging"' }));
+  case 'production':
+    delete config.devtool;
+    config.plugins.push(new webpack.DefinePlugin({ 'process.env.NODE_ENV': '"production"' }));
 }
 
 module.exports = config;
