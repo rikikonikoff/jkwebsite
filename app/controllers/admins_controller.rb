@@ -8,8 +8,8 @@ class AdminsController < Devise::RegistrationsController
   end
 
   def update
-    @admin = current_admin(account_update_params)
-    if @admin.update_attributes?
+    @admin = current_admin
+    if @admin.update_attributes(account_update_params)
       flash[:notice] = "Success!"
       redirect_to root_path
     else
