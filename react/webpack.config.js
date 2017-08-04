@@ -1,7 +1,7 @@
 var config = {
   entry: ['whatwg-fetch', './react/src/main.js'],
   output: {
-    path: './app/assets/javascripts',
+    path: '/Users/rikikonikoff/Documents/jkwebsite/app/assets/javascripts',
     filename: 'bundle.js'
   },
   module: {
