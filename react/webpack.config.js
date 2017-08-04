@@ -4,7 +4,8 @@ var config = {
   entry: ['whatwg-fetch', './react/src/main.js'],
   output: {
     path: '/Users/rikikonikoff/Documents/jkwebsite/app/assets/javascripts',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: '/'
   },
   module: {
     rules: [

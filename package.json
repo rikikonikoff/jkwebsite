@@ -4,13 +4,13 @@
   "description": "Jacob's personal website",
   "main": "webpack.config.js",
   "scripts": {
-    "heroku-postbuild": "NODE_ENV=production npm run webpack -- -p",
+    "heroku-postbuild": "NODE_ENV=production npm run webpack --",
     "start": "npm run webpack -- --watch",
     "test": "node_modules/.bin/karma start react/karma.conf.js",
     "webpack": "node_modules/.bin/webpack --config ./react/webpack.config.js"
   },
   "engines": {
-    "node": "7.4.0"
+    "node": "8.2.1"
   },
   "repository": {
     "type": "git",
