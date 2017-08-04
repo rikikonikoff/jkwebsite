@@ -3,7 +3,7 @@ var webpack = require('webpack');
 var config = {
   entry: ['whatwg-fetch', './react/src/main.js'],
   output: {
-    path: './app/assets/javascripts',
+    path: '/Users/rikikonikoff/Documents/jkwebsite/app/assets/javascripts',
     filename: 'bundle.js'
   },
   module: {
@@ -20,7 +20,7 @@ var config = {
     ]
   },
   resolve: {
-    extensions: ['', '.json', '.jsx', '.js']
+    extensions: ['.json', '.jsx', '.js']
   },
   devtool: 'eval-source-map',
   plugins: []
