@@ -1,11 +1,11 @@
 var webpack = require('webpack');
+var path = require('path');
 
 var config = {
   entry: ['whatwg-fetch', './react/src/main.js'],
   output: {
-    path: '/Users/rikikonikoff/Documents/jkwebsite/app/assets/javascripts',
-    filename: 'bundle.js',
-    publicPath: '/'
+    path: path.join(__dirname, "app/assets/javascripts"),
+    filename: 'bundle.js'
   },
   module: {
     rules: [
