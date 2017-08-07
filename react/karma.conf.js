@@ -1,4 +1,4 @@
-import path from 'path';
+var path = require('path');
 
 module.exports = function(config) {
   config.set({
@@ -61,7 +61,7 @@ module.exports = function(config) {
       // Relative path starts out at the src folder when importing modules
       resolve: {
         modules: [
-          path.join(__dirname, "src"),
+          path.resolve("./src"),
           "node_modules"
         ]
       }
