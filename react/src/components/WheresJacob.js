@@ -5,7 +5,7 @@ class WheresJacob extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      wheresJacob: null
+      wheresJacob: ''
     };
     this.fetchJacob = this.fetchJacob.bind(this);
   }
@@ -29,7 +29,7 @@ class WheresJacob extends Component {
 
   componentDidMount(){
     this.fetchJacob();
-    setInterval(this.fetchJacob, 5000);
+    setInterval(this.fetchJacob, 10000);
   }
 
   render(){
