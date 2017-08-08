@@ -22,6 +22,3 @@
 
 #Ignore test images
 /public/uploads/*
-
-#Ignore npm install
-/package-lock.json
